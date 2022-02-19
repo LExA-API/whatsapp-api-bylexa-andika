@@ -59,6 +59,8 @@ client.on('message', msg => {
     msg.reply('pong');
   } else if (msg.body == '@good morning') {
     msg.reply('selamat pagi');
+ } else if (msg.body == '@menu') {
+    msg.reply('*Fitur bot ini* \n @lvlg:untuk list lvlg \n @fasilitas guild:fasilitas di guild Re:Union \n @list buff:untuk list buff yg dimilik member guild');
   }
     else if (msg.body == '@lvlg') {
        msg.reply("_*Part I*_ \n 1-31 Shell Mask \n 31-30 Pova \n 40-46 Bone Dragonewt A1 \n 46-55 Bone Dragonewt A3 \n 55-65 Flare Volg (Hard) \n 65-78 Flare Volg (NM) \n 78-88 Mochelo (Ulti) \n 88-97 Flare Volg (Ulti)");
