@@ -63,7 +63,7 @@ client.on('message', msg => {
     msg.reply('*Fitur bot ini* \n @lvlg:untuk list lvlg \n @fasilitas guild:fasilitas di guild Re:Union \n @list buff:untuk list buff yg dimilik member guild');
   }
     else if (msg.body == '@lvlg') {
-       msg.reply("_*Part I*_ \n 1-31 Shell Mask \n 31-30 Pova \n 40-46 Bone Dragonewt A1 \n 46-55 Bone Dragonewt A3 \n 55-65 Flare Volg (Hard) \n 65-78 Flare Volg (NM) \n 78-88 Mochelo (Ulti) \n 88-97 Flare Volg (Ulti)");
+       msg.reply("_*Part I*_ \n 1-31 Shell Mask \n 31-30 Pova \n 40-46 Bone Dragonewt A1 \n 46-55 Bone Dragonewt A3 \n 55-65 Flare Volg (Hard) \n 65-78 Flare Volg (NM) \n 78-88 Mochelo (Ulti) \n 88-97 Flare Volg (Ulti) \n 98-104 Don Yeti \n 104-114 Masked Warrior (Ulti) \n 114-124 Cerberus (NM) \n 124-134 Lapin \n 134-145 Cerberus (Ulti) \n 145-148 Bexiz (Ulti) \n 148-153 Commander Golem \n 153-164 Venena (Hard) \n 164-179 Venena (NM) \n 179-182 Altoblepas \n 182-199 Venena (Ulti) \n 199-202 Frenzy Viola \n 202-212 Finstern (Ulti) \n 212-220 Kuzto \n 220-230 Gravicep");
   
   } else if (msg.body == '@halo sayang') {
     msg.reply('hai juga');
