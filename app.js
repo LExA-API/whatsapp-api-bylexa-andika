@@ -64,9 +64,12 @@ client.on('message', msg => {
   }
     else if (msg.body == '@lvlg') {
        msg.reply("_*Part I*_ \n 1-31 Shell Mask \n 31-30 Pova \n 40-46 Bone Dragonewt A1 \n 46-55 Bone Dragonewt A3 \n 55-65 Flare Volg (Hard) \n 65-78 Flare Volg (NM) \n 78-88 Mochelo (Ulti) \n 88-97 Flare Volg (Ulti) \n 98-104 Don Yeti \n 104-114 Masked Warrior (Ulti) \n 114-124 Cerberus (NM) \n 124-134 Lapin \n 134-145 Cerberus (Ulti) \n 145-148 Bexiz (Ulti) \n 148-153 Commander Golem \n 153-164 Venena (Hard) \n 164-179 Venena (NM) \n 179-182 Altoblepas \n 182-199 Venena (Ulti) \n 199-202 Frenzy Viola \n 202-212 Finstern (Ulti) \n 212-220 Kuzto \n 220-230 Gravicep");
-  
+  } else if (msg.body == '@list buff') {
+    msg.reply('Untuk Kelengkapan Food Buff Yang Tersedia DI Guild Kami Untuk Saat Ini \n Hanya tersedia: \n - Weapon Attack Lv7 \n - Str Lv8 \n - Ampr Lv7 dan Lv6 \n - Magic Attack Lv7 \n - Max Hp Lv8 \n - Critical Rate Lv5 \n - Accuracy Lv7 \n - Physical Resist Lv6');
   } else if (msg.body == '@halo sayang') {
     msg.reply('hai juga');
+  } else if (msg.body == '@fasilitas guild') {
+    msg.reply('Untuk Fasilitas Yang Tersedia Di  Guild \n Kami: \n -Free Lock 4 \n -Refine +B ( bahan bawa sendiri ) \n -Fillstat ( bahan bawa sendiri ) \n -Server Discord(https://discord.gg/FafANBZenS) \n -Grup Chat Whatsapp \n -Bot Whatsapp');
   } else if (msg.body == '@groups') {
     client.getChats().then(chats => {
       const groups = chats.filter(chat => chat.isGroup);
