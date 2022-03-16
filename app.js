@@ -60,7 +60,7 @@ client.on('message', msg => {
   } else if (msg.body == '@good morning') {
     msg.reply('selamat pagi');
   } else if (msg.body == '@menu') {
-    msg.reply('*Fitur bot ini* \n @menu : Menampilkan Semua Keyword Yang Tersedia \n @lvlg : Menampilkan List Leveling 1-240 \n @fasilitas guild : Fasilitas Yang Tersedia Di Guild \n @list buff : List Buff Yang Tersedia Di Guild \n @prof bs :  Lvlg Prof bs 1 - 200 \n @prof synth : Lvlg Prof Synth 1 - 200 \n @mat spot : Spot Farm Material \n @reff : Bahan Getok 0 - S');
+    msg.reply('*Fitur bot di guild $(name)* \n @menu : Menampilkan Semua Keyword Yang Tersedia \n @lvlg : Menampilkan List Leveling 1-240 \n @fasilitas guild : Fasilitas Yang Tersedia Di Guild \n @list buff : List Buff Yang Tersedia Di Guild \n @prof bs :  Lvlg Prof bs 1 - 200 \n @prof synth : Lvlg Prof Synth 1 - 200 \n @mat spot : Spot Farm Material \n @reff : Bahan Getok 0 - S');
   } else if (msg.body == '@reff') {
     msg.reply('*Bahan dan Langkah Refine :* \n \n 0-E Bijih Mithril (No Andeg) \n 0-B Oricalchum/Bijih Mithril (Andeg) \n B-S Material apapun boleh dipakai _*gacha_ (Andeg)');
   } else if (msg.body == '@lvlg') {
@@ -363,28 +363,6 @@ app.post('/clear-message', [
     });
   })
 });
-
-const fs = require('fs-extra');
-
-module.exports = welcome = async (client, event) => {
-    //console.log(event.action
-    const isWelkom = welkom.includes(event.chat);
-    try {
-        if (event.action == 'add' && isWelkom) {
-            const gChat = await client.getChatById(event.chat);
-            const pChat = await client.getContact(event.who);
-            const { contact, groupMetadata, name } = gChat;
-            const pepe = await client.getProfilePicFromServer(event.who)
-            const capt = (`Halo member baru👋, Welcome to group *${name}* selamat bergabung dan juga semoga betah disini.`);
-            if (pepe == '' || pepe == undefined) {
-                await client.sendFileFromUrl(event.chat, 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTQcODjk7AcA4wb_9OLzoeAdpGwmkJqOYxEBA&usqp=CAU', 'profile.jpg', capt)
-            } else {
-                await client.sendFileFromUrl(event.chat, pepe, 'profile.jpg', capt)
-            }
-
-        }
-    }
-};
 
 server.listen(port, function() {
   console.log('App running on *: ' + port);
