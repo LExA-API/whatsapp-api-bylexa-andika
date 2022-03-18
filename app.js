@@ -60,7 +60,7 @@ client.on('message', msg => {
   } else if (msg.body == '@good morning') {
     msg.reply('selamat pagi');
   } else if (msg.body == '@menu') {
-    msg.reply('*Fitur bot di guild* \n \n @menu : Menampilkan Semua Keyword Yang Tersedia \n @lvlg : Menampilkan List Leveling 1-240 \n @fasilitas guild : Fasilitas Yang Tersedia Di Guild \n @list buff : List Buff Yang Tersedia Di Guild \n @prof bs :  Lvlg Prof bs 1 - 200 \n @prof synth : Lvlg Prof Synth 1 - 200 \n @mat spot : Spot Farm Material \n @reff : Bahan Getok 0 - S \n \n *Jika bot tidak menjawab, artinya bot sedang offline');
+    msg.reply('[ Menu ] \n *Fitur Bot Di Guild* \n \n \n [ Leveling ] \n *List Leveling Mobs/Skills* \n > @prof bs \n > @prof synth \n > @lvlg char \n > @lvlg pet \n > @lvlg bag \n \n \n [ Fasilitas Guild ] \n *Jasa dan Fasilitas Guild* \n > @List Buff \n > @Seller Spina \n > @Media Guild \n > @service \n > @mat spot \n \n _*Jika bot tidak menjawab, artinya bot sedang offline_');
   } else if (msg.body == '@reff') {
     msg.reply('*Bahan dan Langkah Refine :* \n \n 0-E Bijih Mithril (No Andeg) \n 0-B Oricalchum/Bijih Mithril (Andeg) \n B-S Material apapun boleh dipakai _*gacha_ (Andeg)');
   } else if (msg.body == '@lvlg') {
