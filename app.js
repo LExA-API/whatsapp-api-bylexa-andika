@@ -60,17 +60,25 @@ client.on('message', msg => {
   } else if (msg.body == '@good morning') {
     msg.reply('selamat pagi');
   } else if (msg.body == '@menu') {
-    msg.reply('[ Menu ] \n *Fitur Bot Di Guild* \n \n \n [ Leveling ] \n *List Leveling Mobs/Skills* \n > @prof smith \n > @prof synth \n > @lvlg char \n > @lvlg pet \n > @lvlg bag \n \n \n [ Fasilitas Guild ] \n *Jasa dan Fasilitas Guild* \n > @List Buff \n > @Seller Spina \n > @Media Guild \n > @service \n > @mat spot \n \n _*Jika bot tidak menjawab, artinya bot sedang offline_');
+    msg.reply('[ Menu ] \n *Fitur Bot Di Guild* \n \n \n [ Leveling ] \n *List Leveling Mobs/Skills* \n > @prof smith \n > @prof synth \n > @lvlg char \n > @lvlg bag \n \n \n [ Fasilitas Guild ] \n *Jasa dan Fasilitas Guild* \n > @list buff \n > @seller spina \n > @media guild \n > @service \n \n \n [ Random ] \n *Info Seputar Toram* \n > @mat spot \n > @pet \n > @xtall \n \n _*Jika bot tidak menjawab, artinya bot sedang offline_');
   } else if (msg.body == '@reff') {
     msg.reply('*Bahan dan Langkah Refine :* \n \n 0-E Bijih Mithril (No Andeg) \n 0-B Oricalchum/Bijih Mithril (Andeg) \n B-S Material apapun boleh dipakai _*gacha_ (Andeg)');
-  } else if (msg.body == '@lvlg') {
+  } else if (msg.body == '@lvlg char') {
     msg.reply("_*Part I*_ \n 1-31 Shell Mask \n 31-30 Pova \n 40-46 Bone Dragonewt A1 \n 46-55 Bone Dragonewt A3 \n 55-65 Flare Volg (Hard) \n 65-78 Flare Volg (NM) \n 78-88 Mochelo (Ulti) \n 88-97 Flare Volg (Ulti) \n 98-104 Don Yeti \n 104-114 Masked Warrior (Ulti) \n 114-124 Cerberus (NM) \n 124-134 Lapin \n 134-145 Cerberus (Ulti) \n 145-148 Bexiz (Ulti) \n 148-153 Commander Golem \n 153-164 Venena (Hard) \n 164-179 Venena (NM) \n 179-182 Altoblepas \n 182-199 Venena (Ulti) \n 199-202 Frenzy Viola \n 202-212 Finstern (Ulti) \n 212-220 Kuzto \n 220-230 Gravicep");
   } else if (msg.body == '@list buff') {
-    msg.reply('*Untuk Kelengkapan Food Buff Yang Tersedia DI Guild Kami Untuk Saat Ini:* \n \n Hanya tersedia: \n - Weapon Attack Lv8 ( RaffiAS ) \n - Str Lv8 ( KAREMO ) \n - Ampr Lv7 ( Dark Eve ) \n - Magic Attack Lv7 ( JerryRS ) \n - Max Hp Lv8 ( Hestiii ) \n - Critical Rate Lv5 ( Killey31 ) \n - Physical Resist Lv6 ( Reiki ) \n - Max Mp Lv6 ( LExA_Ass)');
+    msg.reply('*Untuk Kelengkapan Food Buff Yang Tersedia DI Guild Kami Untuk Saat Ini:* \n \n Hanya tersedia: \n - Weapon Attack Lv8 ( RaffiAS ) \n - Str Lv8 ( KAREMO ) \n - Ampr Lv7 ( Dark Eve ) \n - Magic Attack Lv7 ( JerryRS ) \n - Max Hp Lv8 ( Hestiii ) \n - Critical Rate Lv5 ( Killey31 ) \n - Physical Resist Lv6 ( Reiki ) \n - Max Mp Lv6 ( LExA_Ass) \n - Max Mp Lv9 (SHirou Kusanagi) \n - Critical Rate Lv10 (Shizu) \n - Aggro Lv8 ( ☂️{ F i L O } ☁️)');
   } else if (msg.body == '@prof synth') {
     msg.reply('*List Leveling Lv profiency Synthesis* \n \n > Level 1-10 (Revita I) \n > Level 10-30 (Revita II) \n > Level 30-50 (Revita III) \n > Level 50-80 (Revita IV) \n > Level 80-100 (Revita V) \n > Level 100-150 (Madu Enak) \n > Level 150-200 (Oricalchum Murni)');
   } else if (msg.body == '@halo sayang') {
     msg.reply('hai juga');
+  } else if (msg.body == '@xtall') {
+    msg.reply('*List Rekomendasi Xtall Beserta Upgradenya :* \n \n _>>> DPS XTALL <<<_ \n \n *Vulture :* \n Ganglef✅ \n Machina Tiran✅ \n \n *Agelada :* \n Metal Stinger✅ \n Kapten Lyark✅ \n \n *Bayangan Hitam :* \n Decel✅ \n York✅ \n Tuscog✅ \n \n *Gemma :* \n Cerberus✅ \n Pyxtica✅ \n \n *Rephton :* \n Zolban✅ \n \n *Hexter :* \n Ksatria Buruk Dusta✅ \n Gwaimol✅ \n \n *Velum :* \n Imitator✅ \n Mardula✅ \n \n *Baphomela :* \n Naga Senja✅ \n \n *Venena ll :* \n Venena l✅ \n \n *Mega Alpoca :* \n Celeng Raksasa✅ \n \n *Raja Kegelapan :* \n Ayah Yashiro Azuki✅ \n \n *Rhinosour :* \n Minotaur✅ \n \n *Machina Ultima :* \n Golem Pilar✅ \n \n *Roh Orang Mati :* \n Baron bling-bling✅ \n \n *Raja Piton :* \n Warmonger✅ \n Proto Leon✅ \n \n *Mata Jahannam :* \n Quasar Jahannam✅ \n \n *Pret :* \n Odelon Machina✅ \n \n *Usamochi :* \n Usakichi✅ \n Usami✅ \n \n *Gordo :* \n Naga Sabana Yelb✅ \n Roda Kelana✅ \n \n \n _>>> TANK XTALL <<<_ \n \n *Mama Fluck :* \n Ifrid✅ \n \n *Trokostida :* \n Dusk Machina✅ \n \n *Memec :* \n Tentara Batu✅ \n \n *Yuveria :* \n Gopherga✅ \n \n *Seraph Machina :* \n Coryn Besar✅ \n \n \n _>>> MAGE XTALL <<<_ \n \n *Finstern :* \n Imitacia✅ \n \n *Momok Gelembung :* \n Mbah Dukun Usasama✅ \n \n *Guignol :* \n Nurethoth✅ \n \n *Lalvada :* \n Ooze✅');
+  } else if (msg.body == '@pet') {
+    msg.reply('*Daftar Lengkap Pet Toram :* \n \n > @lvlg pet \n @status pet \n @sifat bonus');
+  } else if (msg.body == '@lvlg pet') {
+    msg.reply('*List Leveling Pet :* \n \n LVL 1 - 50 Masked Warrior Normal/Hard \n LVL 50 - 80 Masked Warrior Nightmare \n LVL 80 - 90 Masked Warrior Ultimate \n LVL 90 - 110 Cerberus Nightmare \n LVL 110 - 150 Cerberus Ultimate \n LVL 150 - 160 Venena Nightmare \n LVL 160 - 200 Venena Ulti');
+  } else if (msg.body == '@media guild') {
+    msg.reply('*Sosial Media Guild Re:Union :* \n \n - Discord : https://discord.gg/FafANBZenS \n - Instagram: https://www.instagram.com/re.union._/ \n Youtube : https://www.youtube.com/channel/UCYHVbLoQKHUKrYfTj31lbBg');
   } else if (msg.body == '@seller spina') {
     msg.reply('*+ Miku Store List +* \n - Jasa All Material √ (Mana only opened summer event) (100/day) \n - S) Lock 4 (Reset) \n - S) Bwing Service 100/day √ \n - S) Jasa Mq skip/ No Skip \n - S) Spina √ \n - S) SS HV MORE √ \n - S) Reff Service 0 - B \n - S) Acc Avatar Subaru+Felt (Re:Zero) no cap/mq \n - S) Dte Bumi Lv7 \n - \n - \n No WA: http://wa.me/6289668162848 \n My Fb: https://m.facebook.com/profile.php?id=100056038733948&ref=content_filter');
   } else if (msg.body == '@service') {
