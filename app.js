@@ -71,6 +71,8 @@ client.on('message', msg => {
     msg.reply('*List Leveling Lv profiency Synthesis* \n \n > Level 1-10 (Revita I) \n > Level 10-30 (Revita II) \n > Level 30-50 (Revita III) \n > Level 50-80 (Revita IV) \n > Level 80-100 (Revita V) \n > Level 100-150 (Madu Enak) \n > Level 150-200 (Oricalchum Murni)');
   } else if (msg.body == '@halo sayang') {
     msg.reply('hai juga');
+  } else if (msg.body == '@seller spina') {
+    msg.reply('*Para Seller Spina Yang Tergabung Didalam Guild :* \n \n - @jerry \n - @sapior');
   } else if (msg.body == 'siapa ayunda?') {
     msg.reply('*ayunda adalah system bot guild Re:Union yang di kembangkan oleh leader guild RaffiAS tehe🤪*');
   } else if (msg.body == '@xtall') {
@@ -81,8 +83,10 @@ client.on('message', msg => {
     msg.reply('*List Leveling Pet :* \n \n LVL 1 - 50 Masked Warrior Normal/Hard \n LVL 50 - 80 Masked Warrior Nightmare \n LVL 80 - 90 Masked Warrior Ultimate \n LVL 90 - 110 Cerberus Nightmare \n LVL 110 - 150 Cerberus Ultimate \n LVL 150 - 160 Venena Nightmare \n LVL 160 - 200 Venena Ulti');
   } else if (msg.body == '@media guild') {
     msg.reply('*Sosial Media Guild Re:Union :* \n \n - Discord : https://discord.gg/FafANBZenS \n - Instagram: https://www.instagram.com/re.union._/ \n Youtube : https://www.youtube.com/channel/UCYHVbLoQKHUKrYfTj31lbBg');
-  } else if (msg.body == '@seller spina') {
+  } else if (msg.body == '@jerry') {
     msg.reply('*+ Miku Store List +* \n - Jasa All Material √ (Mana only opened summer event) (100/day) \n - S) Lock 4 (Reset) \n - S) Bwing Service 100/day √ \n - S) Jasa Mq skip/ No Skip \n - S) Spina √ \n - S) SS HV MORE √ \n - S) Reff Service 0 - B \n - S) Acc Avatar Subaru+Felt (Re:Zero) no cap/mq \n - S) Dte Bumi Lv7 \n - \n - \n No WA: http://wa.me/6289668162848 \n My Fb: https://m.facebook.com/profile.php?id=100056038733948&ref=content_filter');
+  } else if (msg.body == '@sapior') {
+    msg.reply('_Pengen jadi elite?_ \n _Pengen punya couple?_ \n _Atau pengen ngehode tapi gak ada spina?_ \n \n Xavior store solusinya: \n ✅ Trusted \n ✅ Rate Kekeluargaan \n ✅ Halal (hasil mulung) \n \n Melayani 24 jam selama tidak ketiduran, pm langsung untuk fast respon. \n \n *Noted: Xavior shop sudah berpengalaman selama hampir 5 tahun, intinya udah kebal PHP😇*');
   } else if (msg.body == '@service') {
     msg.reply('*Service Yang Tersedia Di Guild :* \n \n - Free Lock 4 \n - Refine +B \n - Fillstat cr23');
   } else if (msg.body == '@prof smith') {
