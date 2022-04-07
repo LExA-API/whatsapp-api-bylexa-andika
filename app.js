@@ -24,11 +24,6 @@ app.use(fileUpload({
   debug: true
 }));
 
-const SESSION_FILE_PATH = './whatsapp-session.json';
-let sessionCfg;
-if (fs.existsSync(SESSION_FILE_PATH)) {
-  sessionCfg = require(SESSION_FILE_PATH);
-}
 
 app.get('/', (req, res) => {
   res.sendFile('index.html', {
