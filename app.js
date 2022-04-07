@@ -24,6 +24,11 @@ app.use(fileUpload({
   debug: true
 }));
 
+const SESSION_FILE_PATH = './whatsapp-session.json';
+let sessionCfg;
+if (fs.existsSync(SESSION_FILE_PATH)) {
+  sessionCfg = require(SESSION_FILE_PATH);
+}
 
 app.get('/', (req, res) => {
   res.sendFile('index.html', {
@@ -62,20 +67,16 @@ client.on('message', msg => {
     msg.reply('*List Leveling 1-240* \n \n \n _> 1-36 :_ Nisel Mask (Gunung Nisel : Area Lereng) 🟠 \n \n _> 36-57 :_ Bone Dragonewt (Makam Ratu : Area 1) ⚫ \n \n _ > 57-67 :_ Flare Volg *Hard* (Lereng Merapi : Jejak Lava) 🔴 \n \n _> 67-74 :_ Flare Volg *Nightmare* (Lereng Merapi : Jejak Lava) 🔴 \n \n _> 74-80 :_ Pendekar Bertopeng *Hard* (Tanah Pertanian : Tanah Tinggi) 🔴 \n \n _> 84-96 :_ Pendekar Bertopeng *Nightmare* (Tanah Pertanian : Tanah Tinggi) 🔴 \n \n _> 96-110 :_ Don Yeti (Lembah Es Polde) 🟠 \n \n _> 110-128 :_ Cerberus *Nightmare* (Mata Air Kelahiran : Puncak) 🔵 \n \n _> 128-140 :_ Cerberus *Ultimate* (Mata Air Kelahiran : Puncak) 🔵 \n \n _> 140-148 :_ Odelon Machina (Pabrik Demi Machina Besar : Area 2) ⚪ \n \n _> 148-157 :_ Komandan Golem (Mansion Lufenas : Pintu Masuk) ⚫ \n \n _> 157-162 :_ Venena Coenubia *Hard* (Istana Ultimea : Takhta) 🔴 \n \n _> 162-180 :_ Venena Coenubia *Nightmare* (Istana Ultimea : Takhta) 🔴 \n \n _> 180-200 :_ Venena Coenubia *Ultimate* (Istana Ultime : Takhta) 🔴 \n \n _> 200-215 :_ Finstern si Naga Kegelapan *Ultimate* (Istana Naga Kegelapan : Dekat Puncak) ⚫ \n \n _> 215-220 :_ Kuzto *Ultimate* (Distrik Labilans : Alun-alun) 🟠 \n \n _> 220-230 :_ Roh Orang Mati (Lembah Arche : Area 1) ⚫ \n \n _> 230-240 :_ Arachnidemon *Ultimate* (Lembah Arche : Area Terdalam) ⚫ \n \n \n *Spot Alternatif :* \n \n _> 70-96 :_ Quest "Kesalahan Pemabuk" pada npc Ravagne (El Scaro) 🟠 \n \n _> 120-130 :_ Dukun Lapin (Sungai Kegelapan) ⚫ \n \n _> 178-182 :_ Altoblepas (Dataran Rokoko) 🟢 \n \n _> 200-220 :_ Finstern Si Naga Kegelapan *Ultimate* (Kuil Naga Kegelapan : Dekat Puncak) ⚫ \n \n \n \n \n *Penjelasan :* \n 🔴 > Elemen Api \n 🟠 > Elemen Bumi \n 🔵 > Elemen Air \n ⚫ > Elemen Gelap \n ⚪ > Elemen Cahaya \n 🟢 > Elemen Netral');
   } else if (msg.body == '@list buff') {
     msg.reply('*Untuk Kelengkapan Food Buff Yang Tersedia DI Guild Kami Untuk Saat Ini:* \n \n Hanya tersedia: \n - Weapon Attack Lv8 ( RaffiAS ) \n - Str Lv8 ( KAREMO ) \n - Ampr Lv7 ( Dark Eve ) \n - Magic Attack Lv8 ( JerryRS ) \n - Max Hp Lv8 ( Hestiii ) \n - Critical Rate Lv6 ( Killey31 ) \n - Critical Rate Lv7 (yllwclw) \n - Physical Resist Lv6 ( Reiki ) \n - Max Mp Lv6 ( LExA_Ass) \n - Max Mp Lv9 (Shirou Kusanagi) \n - Aggro Lv8 ( ☂️{ F i L O } ☁️) \n - Int Lv7 (AE)');
-  } else if (msg.body == '@prof synth') {
-    msg.reply('*List Leveling Lv profiency Synthesis* \n \n > Level 1-10 (Revita I) \n > Level 10-30 (Revita II) \n > Level 30-50 (Revita III) \n > Level 50-80 (Revita IV) \n > Level 80-100 (Revita V) \n > Level 100-150 (Madu Enak) \n > Level 150-200 (Oricalchum Murni)');
   } else if (msg.body == '@halo sayang') {
     msg.reply('hai juga');
-  } else if (msg.body == '@seller spina') {
-    msg.reply('*Para Seller Spina Yang Tergabung Didalam Guild :* \n \n - @jerry \n - @sapior');
-  } else if (msg.body == 'siapa ayunda?') {
-    msg.reply('*ayunda adalah system bot guild Re:Union yang di kembangkan oleh leader guild RaffiAS tehe🤪*');
-  } else if (msg.body == '@xtall') {
-    msg.reply('*List Rekomendasi Xtall Beserta Upgradenya :* \n \n _>>> DPS XTALL <<<_ \n \n *Vulture :* \n Ganglef✅ \n Machina Tiran✅ \n \n *Agelada :* \n Metal Stinger✅ \n Kapten Lyark✅ \n \n *Bayangan Hitam :* \n Decel✅ \n York✅ \n Tuscog✅ \n \n *Gemma :* \n Cerberus✅ \n Pyxtica✅ \n \n *Rephton :* \n Zolban✅ \n \n *Hexter :* \n Ksatria Buruk Dusta✅ \n Gwaimol✅ \n \n *Velum :* \n Imitator✅ \n Mardula✅ \n \n *Baphomela :* \n Naga Senja✅ \n \n *Venena ll :* \n Venena l✅ \n \n *Mega Alpoca :* \n Celeng Raksasa✅ \n \n *Raja Kegelapan :* \n Ayah Yashiro Azuki✅ \n \n *Rhinosour :* \n Minotaur✅ \n \n *Machina Ultima :* \n Golem Pilar✅ \n \n *Roh Orang Mati :* \n Baron bling-bling✅ \n \n *Raja Piton :* \n Warmonger✅ \n Proto Leon✅ \n \n *Mata Jahannam :* \n Quasar Jahannam✅ \n \n *Pret :* \n Odelon Machina✅ \n \n *Usamochi :* \n Usakichi✅ \n Usami✅ \n \n *Gordo :* \n Naga Sabana Yelb✅ \n Roda Kelana✅ \n \n \n _>>> TANK XTALL <<<_ \n \n *Mama Fluck :* \n Ifrid✅ \n \n *Trokostida :* \n Dusk Machina✅ \n \n *Memec :* \n Tentara Batu✅ \n \n *Yuveria :* \n Gopherga✅ \n \n *Seraph Machina :* \n Coryn Besar✅ \n \n \n _>>> MAGE XTALL <<<_ \n \n *Finstern :* \n Imitacia✅ \n \n *Momok Gelembung :* \n Mbah Dukun Usasama✅ \n \n *Guignol :* \n Nurethoth✅ \n \n *Lalvada :* \n Ooze✅');
-  } else if (msg.body == '@pet') {
-    msg.reply('*Daftar Lengkap Pet Toram :* \n \n > @lvlg pet \n > @status pet \n > @sifat bonus');
   } else if (msg.body == '@lvlg pet') {
     msg.reply('*List Leveling Pet :* \n \n LVL 1 - 50 Masked Warrior Normal/Hard \n LVL 50 - 80 Masked Warrior Nightmare \n LVL 80 - 90 Masked Warrior Ultimate \n LVL 90 - 110 Cerberus Nightmare \n LVL 110 - 150 Cerberus Ultimate \n LVL 150 - 160 Venena Nightmare \n LVL 160 - 200 Venena Ulti');
+  } else if (msg.body == '@pet') {
+    msg.reply('*Daftar Lengkap Pet Toram :* \n \n > @lvlg pet \n > @status pet \n > @sifat bonus');
+  } else if (msg.body == '@xtall') {
+    msg.reply('*List Rekomendasi Xtall Beserta Upgradenya :* \n \n _>>> DPS XTALL <<<_ \n \n *Vulture :* \n Ganglef✅ \n Machina Tiran✅ \n \n *Agelada :* \n Metal Stinger✅ \n Kapten Lyark✅ \n \n *Bayangan Hitam :* \n Decel✅ \n York✅ \n Tuscog✅ \n \n *Gemma :* \n Cerberus✅ \n Pyxtica✅ \n \n *Rephton :* \n Zolban✅ \n \n *Hexter :* \n Ksatria Buruk Dusta✅ \n Gwaimol✅ \n \n *Velum :* \n Imitator✅ \n Mardula✅ \n \n *Baphomela :* \n Naga Senja✅ \n \n *Venena ll :* \n Venena l✅ \n \n *Mega Alpoca :* \n Celeng Raksasa✅ \n \n *Raja Kegelapan :* \n Ayah Yashiro Azuki✅ \n \n *Rhinosour :* \n Minotaur✅ \n \n *Machina Ultima :* \n Golem Pilar✅ \n \n *Roh Orang Mati :* \n Baron bling-bling✅ \n \n *Raja Piton :* \n Warmonger✅ \n Proto Leon✅ \n \n *Mata Jahannam :* \n Quasar Jahannam✅ \n \n *Pret :* \n Odelon Machina✅ \n \n *Usamochi :* \n Usakichi✅ \n Usami✅ \n \n *Gordo :* \n Naga Sabana Yelb✅ \n Roda Kelana✅ \n \n \n _>>> TANK XTALL <<<_ \n \n *Mama Fluck :* \n Ifrid✅ \n \n *Trokostida :* \n Dusk Machina✅ \n \n *Memec :* \n Tentara Batu✅ \n \n *Yuveria :* \n Gopherga✅ \n \n *Seraph Machina :* \n Coryn Besar✅ \n \n \n _>>> MAGE XTALL <<<_ \n \n *Finstern :* \n Imitacia✅ \n \n *Momok Gelembung :* \n Mbah Dukun Usasama✅ \n \n *Guignol :* \n Nurethoth✅ \n \n *Lalvada :* \n Ooze✅');
+  } else if (msg.body == 'siapa ayunda?') {
+    msg.reply('*ayunda adalah system bot guild Re:Union yang di kembangkan oleh leader guild RaffiAS tehe🤪*');
   } else if (msg.body == '@media guild') {
     msg.reply('*Sosial Media Guild Re:Union :* \n \n - Discord : https://discord.gg/FafANBZenS \n - Instagram: https://www.instagram.com/re.union._/ \n Youtube : https://www.youtube.com/channel/UCYHVbLoQKHUKrYfTj31lbBg');
   } else if (msg.body == '@jerry') {
@@ -90,6 +91,13 @@ client.on('message', msg => {
     msg.reply('*Spot Farming Semua Material* \n \n *- Kayu :* Ivy (Lv 150) Kuil Naga Kegelapan : Bawah \n *- Kain :* Potum Semedi (Lv 132) Koridor Heresi \n *- Obat :* Grape Jelly (Lv 110) Saluran Bawah Tanah Ultimea : Tenggara \n *- Fauna :* Boar (Lv 97) Lembah Dalam Sykea \n *- Logam :* Malaikat Gelembung (Lv 143) Kuil Para Dewa : Area 2 \n *- Mana :* Summer Shell (Event Musim Panas) Semua Mob Berunsur Air \n \n _*Alternatif Tempat Lain Jika Map Tersebut Sedang Sepi_ \n \n *- Mana :* Venena Coenubia/Meta (proc weapon drop) Istana Ultimea : Takhta \n *- Fauna :* Underground Nemico (Lv 109) Saluran Bawah Tanah Ultimea : Tenggara');
   } else if (msg.body == '@fasilitas guild') {
     msg.reply('*Untuk Fasilitas Yang Tersedia Di  Guild Kami:* \n -Free Lock 4 \n -Refine +B ( bahan bawa sendiri ) \n -Fillstat ( bahan bawa sendiri ) \n -Server Discord(https://discord.gg/FafANBZenS) \n -Grup Chat Whatsapp \n -Bot Whatsapp');
+  
+  } else if (msg.body == '@seller spina') {
+    msg.reply('*Para Seller Spina Yang Tergabung Didalam Guild :* \n \n - @jerry \n - @sapior');
+  } else if (msg.body == '@prof synth') {
+    msg.reply('*List Leveling Lv profiency Synthesis* \n \n > Level 1-10 (Revita I) \n > Level 10-30 (Revita II) \n > Level 30-50 (Revita III) \n > Level 50-80 (Revita IV) \n > Level 80-100 (Revita V) \n > Level 100-150 (Madu Enak) \n > Level 150-200 (Oricalchum Murni)');
+  } else if (msg.body == '@fasilitas guild') {
+    msg.reply('Untuk Fasilitas Yang Tersedia Di  Guild \n Kami: \n -Free Lock 4 \n -Refine +B ( bahan bawa sendiri ) \n -Fillstat ( bahan bawa sendiri ) \n -Server Discord(https://discord.gg/FafANBZenS) \n -Grup Chat Whatsapp \n -Bot Whatsapp');
   } else if (msg.body == '@groups') {
     client.getChats().then(chats => {
       const groups = chats.filter(chat => chat.isGroup);
