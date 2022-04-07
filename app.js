@@ -82,7 +82,7 @@ client.on('message', msg => {
   } else if (msg.body == '@jerry') {
     msg.reply('*+ Miku Store List +* \n - Jasa All Material √ (Mana only opened summer event) (100/day) \n - S) Lock 4 (Reset) \n - S) Bwing Service 100/day √ \n - S) Jasa Mq skip/ No Skip \n - S) Spina √ \n - S) SS HV MORE √ \n - S) Reff Service 0 - B \n - S) Acc Avatar Subaru+Felt (Re:Zero) no cap/mq \n - S) Dte Bumi Lv7 \n - \n - \n No WA: http://wa.me/6289668162848 \n My Fb: https://m.facebook.com/profile.php?id=100056038733948&ref=content_filter');
   } else if (msg.body == '@sapior') {
-    msg.reply('_Pengen jadi elite?_ \n _Pengen punya couple?_ \n _Atau pengen ngehode tapi gak ada spina?_ \n \n Xavior store solusinya: \n ✅ Trusted \n ✅ Rate Kekeluargaan \n ✅ Halal (hasil mulung) \n \n Melayani 24 jam selama tidak ketiduran, pm langsung untuk fast respon. \n \n *Noted: Xavior shop sudah berpengalaman selama hampir 5 tahun, intinya udah kebal PHP😇*');
+    msg.reply('_Pengen jadi elite?_ \n _Pengen punya couple?_ \n _Atau pengen ngehode tapi gak ada spina?_ \n \n Xavior store solusinya: \n ✅ Trusted \n ✅ Rate Kekeluargaan \n ✅ Halal (hasil mulung) \n \n Melayani 24 jam selama tidak ketiduran, pm langsung untuk fast respon. \n \n *Noted: Xavior shop sudah berpengalaman selama hampir 5 tahun, intinya udah kebal PHP😇 \n \n Contact : wa.me/+628871665503*');
   } else if (msg.body == '@service') {
     msg.reply('*Service Yang Tersedia Di Guild :* \n \n - Free Lock 4 \n - Refine +B \n - Fillstat cr23');
   } else if (msg.body == '@prof smith') {
